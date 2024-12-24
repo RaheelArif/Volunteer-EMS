@@ -161,7 +161,57 @@ h6 {
 .scrolled .header .header-container {
   background: color-mix(in srgb, var(--surface-color), transparent 5%);
 }
+.form-control.custom-placeholder::placeholder{
+  /* color: #4285f4 !important; */
+  /* opacity: 0.8; */
+}
+.search-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border-radius: 50px;
+  padding: 8px;
+  margin-top: 30px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+}
 
+.search-wrapper input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  background: transparent;
+}
+
+.search-wrapper input:focus {
+  box-shadow: none;
+}
+
+.search-wrapper .search-button {
+  background: #4285f4;
+  color: white;
+  border: none;
+  padding: 12px 32px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+}
+
+.search-wrapper .search-button:hover {
+  background: #1a73e8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(66, 133, 244, 0.3);
+}
+
+.custom-placeholder::placeholder {
+  color: #4285f4;
+  opacity: 0.7;
+}
 .header .logo {
   line-height: 1;
   padding-left: 5px;
@@ -2368,3 +2418,6 @@ width: 200px;
 .starter-section {
   /* Add your styles here */
 }
+
+
+
