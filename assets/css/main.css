@@ -12,24 +12,31 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Nunito",  sans-serif;
-  --nav-font: "Inter",  sans-serif;
+  --default-font: "Roboto", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Nunito", sans-serif;
+  --nav-font: "Inter", sans-serif;
 }
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
-:root { 
+:root {
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #212529; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #2d465e; /* Color for headings, subheadings and title throughout the website */
   --accent-color: #0d83fd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+
+  --ems-red: #e74c3c;
+  --ems-blue: #3498db;
+  --ems-yellow: #f1c40f;
+  --ems-green: #2ecc71;
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #212529;  /* The default color of the main navmenu links */
+  --nav-color: #212529; /* The default color of the main navmenu links */
   --nav-hover-color: #0d83fd; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -161,7 +168,7 @@ h6 {
 .scrolled .header .header-container {
   background: color-mix(in srgb, var(--surface-color), transparent 5%);
 }
-.form-control.custom-placeholder::placeholder{
+.form-control.custom-placeholder::placeholder {
   /* color: #4285f4 !important; */
   /* opacity: 0.8; */
 }
@@ -190,7 +197,7 @@ h6 {
 }
 
 .search-wrapper .search-button {
-  background: #4285f4;
+  background: black;
   color: white;
   border: none;
   padding: 12px 32px;
@@ -209,7 +216,7 @@ h6 {
 }
 
 .custom-placeholder::placeholder {
-  color: #4285f4;
+  color: #3e3e3e;
   opacity: 0.7;
 }
 .header .logo {
@@ -320,7 +327,7 @@ h6 {
     padding-right: 0;
   }
 
-  .navmenu li:hover>a,
+  .navmenu li:hover > a,
   .navmenu .active,
   .navmenu .active:focus {
     color: var(--nav-hover-color);
@@ -359,11 +366,11 @@ h6 {
 
   .navmenu .dropdown ul a:hover,
   .navmenu .dropdown ul .active:hover,
-  .navmenu .dropdown ul li:hover>a {
+  .navmenu .dropdown ul li:hover > a {
     color: var(--nav-dropdown-hover-color);
   }
 
-  .navmenu .dropdown:hover>ul {
+  .navmenu .dropdown:hover > ul {
     opacity: 1;
     top: 100%;
     visibility: visible;
@@ -375,7 +382,7 @@ h6 {
     visibility: hidden;
   }
 
-  .navmenu .dropdown .dropdown:hover>ul {
+  .navmenu .dropdown .dropdown:hover > ul {
     opacity: 1;
     top: 0;
     left: -100%;
@@ -478,7 +485,7 @@ h6 {
     background-color: rgba(33, 37, 41, 0.1);
   }
 
-  .navmenu .dropdown>.dropdown-active {
+  .navmenu .dropdown > .dropdown-active {
     display: block;
     background-color: rgba(33, 37, 41, 0.03);
   }
@@ -505,7 +512,7 @@ h6 {
     transition: 0.3s;
   }
 
-  .mobile-nav-active .navmenu>ul {
+  .mobile-nav-active .navmenu > ul {
     display: block;
   }
 }
@@ -547,24 +554,48 @@ h6 {
   font-family: var(--heading-font);
 }
 
+.footer .social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 16px;
+}
+
+.footer .social-links li {
+  margin: 0;
+  padding-top: 0px !important;
+}
+
 .footer .social-links a {
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 40px;
-  height: 40px;
+  background: #f5f5f5;  /* Light gray background */
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  margin-right: 10px;
-  transition: 0.3s;
+  color: #212529;      /* Black icons initially */
+  text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  background: #4285f4 !important;  /* Google blue on hover */
+  color: white !important;        /* White icons on hover */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(66, 133, 244, 0.2);
 }
+
+.footer .social-links i {
+  font-size: 20px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
 
 .footer h4 {
   font-size: 16px;
@@ -615,7 +646,8 @@ h6 {
 
 .footer .copyright {
   padding: 25px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .copyright p {
@@ -698,11 +730,11 @@ h6 {
   font-weight: 400;
 }
 
-.page-title .breadcrumbs ol li+li {
+.page-title .breadcrumbs ol li + li {
   padding-left: 10px;
 }
 
-.page-title .breadcrumbs ol li+li::before {
+.page-title .breadcrumbs ol li + li::before {
   content: "/";
   display: inline-block;
   padding-right: 10px;
@@ -722,7 +754,6 @@ section,
 }
 
 @media (max-width: 1199px) {
-
   section,
   .section {
     scroll-margin-top: 66px;
@@ -769,7 +800,13 @@ section,
 .hero {
   position: relative;
   padding-top: 160px;
-  background: linear-gradient(135deg, color-mix(in srgb, var(--accent-color), transparent 95%) 50%, color-mix(in srgb, var(--accent-color), transparent 98%) 25%, transparent 50%);
+  padding-bottom: 100px;
+  background: linear-gradient(
+    135deg,
+    color-mix(in srgb, var(--accent-color), transparent 95%) 50%,
+    color-mix(in srgb, var(--accent-color), transparent 98%) 25%,
+    transparent 50%
+  );
 }
 
 .hero::before {
@@ -779,7 +816,11 @@ section,
   left: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--accent-color), transparent 92%), transparent 40%);
+  background: radial-gradient(
+    circle at 90% 10%,
+    color-mix(in srgb, var(--accent-color), transparent 92%),
+    transparent 40%
+  );
   pointer-events: none;
 }
 
@@ -803,7 +844,7 @@ section,
 }
 
 .logo-svg {
-  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .sitename {
@@ -823,16 +864,22 @@ section,
 }
 
 @keyframes pulse {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-2px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 .hero .hero-content .hero-buttons {
   display: flex;
   justify-content: center;
 }
-.hero .find-btn-hero{
-width: 200px;
+.hero .find-btn-hero {
+  width: 200px;
 }
 @media (max-width: 992px) {
   .hero .hero-content {
@@ -853,10 +900,10 @@ width: 200px;
   .hero .hero-content h1 {
     font-size: 2rem;
   }
-  .hero .find-btn-hero{
+  .hero .find-btn-hero {
     width: 150px;
-    padding:11px 20px !important;
-    }
+    padding: 11px 20px !important;
+  }
 }
 
 .hero .company-badge {
@@ -1586,7 +1633,6 @@ width: 200px;
 }
 
 @keyframes shapes-float {
-
   0%,
   100% {
     transform: scale(0.8) rotate(45deg) translateY(0);
@@ -1782,61 +1828,133 @@ width: 200px;
 /*--------------------------------------------------------------
 # Services Section
 --------------------------------------------------------------*/
+
+/* Base card styles */
 .services .service-card {
   height: 100%;
   padding: 30px;
-  background: var(--surface-color);
+  background: #ffffff;
   border-radius: 10px;
   transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  border-top: 4px solid transparent;
 }
 
+/* Card colors */
+.services .red-service {
+  border-top-color: var(--ems-red);
+}
+
+.services .yellow-service {
+  border-top-color: var(--ems-yellow);
+}
+
+.services .blue-service {
+  border-top-color: var(--ems-blue);
+}
+
+.services .green-service {
+  border-top-color: var(--ems-green);
+}
+
+/* Hover effect */
 .services .service-card:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
-.services .service-card:hover .icon {
-  background: var(--accent-color);
-  color: var(--contrast-color);
+/* Icon backgrounds */
+.services .red-service .icon {
+  background: rgba(231, 76, 60, 0.1);
+  color: var(--ems-red);
 }
 
-.services .service-card:hover .read-more {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+.services .yellow-service .icon {
+  background: rgba(243, 156, 18, 0.1);
+  color: var(--ems-yellow);
 }
 
+.services .blue-service .icon {
+  background: rgba(52, 152, 219, 0.1);
+  color: var(--ems-blue);
+}
+
+.services .green-service .icon {
+  background: rgba(46, 204, 113, 0.1);
+  color: var(--ems-green);
+}
+
+/* Icon hover states */
+.services .red-service:hover .icon {
+  background: var(--ems-red);
+  color: #ffffff;
+}
+
+.services .yellow-service:hover .icon {
+  background: var(--ems-yellow);
+  color: #ffffff;
+}
+
+.services .blue-service:hover .icon {
+  background: var(--ems-blue);
+  color: #ffffff;
+}
+
+.services .green-service:hover .icon {
+  background: var(--ems-green);
+  color: #ffffff;
+}
+
+/* Icon base styles */
 .services .service-card .icon {
-  width: 60px;
-  height: 60px;
+  width: 64px;
+  height: 64px;
   margin-right: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 90%);
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 8px;
-  color: var(--accent-color);
+  border-radius: 12px;
   font-size: 28px;
   transition: all 0.3s ease;
-  line-height: 1;
 }
 
+/* Read more links */
+.services .red-service .read-more {
+  color: var(--ems-red);
+}
+
+.services .yellow-service .read-more {
+  color: var(--ems-yellow);
+}
+
+.services .blue-service .read-more {
+  color: var(--ems-blue);
+}
+
+.services .green-service .read-more {
+  color: var(--ems-green);
+}
+
+/* Text styles */
 .services .service-card h3 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 15px;
+  color: #2c3e50;
 }
 
 .services .service-card p {
   margin-bottom: 25px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  color: #666;
   font-size: 15px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 .services .service-card .read-more {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--accent-color);
-  font-weight: 500;
+  font-weight: 600;
   transition: all 0.3s ease;
 }
 
@@ -1848,6 +1966,11 @@ width: 200px;
 .services .service-card .read-more:hover i {
   transform: translateX(5px);
 }
+
+
+
+
+
 
 /*--------------------------------------------------------------
 # Pricing Section
@@ -2232,6 +2355,17 @@ width: 200px;
   .contact .contact-form h3 {
     font-size: 1.75rem;
   }
+  .cta-search-wrapper .search-btn{
+    width: 150px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .logo-wrapper{
+    padding: 0px;
+  }
+  .header .logo h1{
+    font-size: 19px;
+  }
 }
 
 .contact .contact-form p {
@@ -2275,7 +2409,11 @@ width: 200px;
 }
 
 .contact .contact-form .btn:hover {
-  background-color: color-mix(in srgb, var(--accent-color), var(--contrast-color) 20%);
+  background-color: color-mix(
+    in srgb,
+    var(--accent-color),
+    var(--contrast-color) 20%
+  );
 }
 
 /*--------------------------------------------------------------
@@ -2287,14 +2425,15 @@ width: 200px;
   box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-details .service-box+.service-box {
+.service-details .service-box + .service-box {
   margin-top: 30px;
 }
 
 .service-details .service-box h4 {
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid color-mix(in srgb, var(--default-color), transparent 92%);
+  border-bottom: 2px solid
+    color-mix(in srgb, var(--default-color), transparent 92%);
   padding-bottom: 15px;
   margin-bottom: 15px;
 }
@@ -2343,7 +2482,8 @@ width: 200px;
   align-items: center;
   padding: 10px 0;
   transition: 0.3s;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid
+    color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .service-details .download-catalog a:first-child {
@@ -2420,4 +2560,50 @@ width: 200px;
 }
 
 
+/* Call to Action Search Box */
+.cta-search-wrapper {
+  max-width: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.cta-search-wrapper .search-box {
+  background: white;
+  border-radius: 50px;
+  padding: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cta-search-wrapper .form-control {
+  border: none;
+  background: transparent;
+  padding-left: 24px;
+  font-size: 16px;
+  border-radius: 50px;
+}
+
+.cta-search-wrapper .form-control:focus {
+  box-shadow: none;
+}
+
+.cta-search-wrapper .search-btn {
+  padding-left: 32px;
+  padding-right: 32px;
+  border-radius: 50px;
+  background: #212529;
+  border: none;
+  font-weight: 500;
+  width: 200px !important;
+  transition: all 0.3s ease;
+}
+
+.cta-search-wrapper .search-btn:hover {
+  background: #000;
+  transform: translateY(-1px);
+}
+
+.cta-search-wrapper .form-control::placeholder {
+  color: #6c757d;
+  opacity: 0.8;
+}
 
