@@ -1,4 +1,118 @@
-   <!-- About Section -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VolunteerEMS - Emergency Medical Services Volunteer Directory</title>
+    <meta
+      name="description"
+      content="Find and join volunteer Emergency Medical Services organizations near you. Connect with local EMS agencies and make a difference in your community."
+    />
+    <meta
+      name="keywords"
+      content="volunteer EMS, emergency medical services, EMS volunteer, medical volunteer, first responder volunteer, ambulance volunteer, emergency services"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9InN0YXItYmFzZSIgZD0iTTI1IDIgTDI5IDIwIEw0NSAyMCBMMzIgMzIgTDM4IDQ4IEwyNSAzOCBMMTIgNDggTDE4IDMyIEw1IDIwIEwyMSAyMCBaIiBmaWxsPSIjNDI4NWY0Ii8+PHBhdGggY2xhc3M9InB1bHNlLWxpbmUiIGQ9Ik0xNSAyNSBMMjAgMjUgTDIzIDE1IEwyNyAzNSBMMzAgMjUgTDM1IDI1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48cGF0aCBjbGFzcz0ibWVkaWNhbC1yb2QiIGQ9Ik0yNCAxNSBRMjUgMjUgMjQgMzUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg=="
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9InN0YXItYmFzZSIgZD0iTTI1IDIgTDI5IDIwIEw0NSAyMCBMMzIgMzIgTDM4IDQ4IEwyNSAzOCBMMTIgNDggTDE4IDMyIEw1IDIwIEwyMSAyMCBaIiBmaWxsPSIjNDI4NWY0Ii8+PHBhdGggY2xhc3M9InB1bHNlLWxpbmUiIGQ9Ik0xNSAyNSBMMjAgMjUgTDIzIDE1IEwyNyAzNSBMMzAgMjUgTDM1IDI1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48cGF0aCBjbGFzcz0ibWVkaWNhbC1yb2QiIGQ9Ik0yNCAxNSBRMjUgMjUgMjQgMzUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg=="
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+
+   
+    
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <!-- Logo Section -->
+        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+          <div class="logo-wrapper d-flex align-items-center">
+            <div class="logo-icon me-2">
+              <svg viewBox="0 0 50 50" class="logo-svg" width="40" height="40">
+                <!-- Star of Life base -->
+                <path
+                  class="star-base"
+                  d="M25 2 L29 20 L45 20 L32 32 L38 48 L25 38 L12 48 L18 32 L5 20 L21 20 Z"
+                  fill="#2d465e"
+                />
+                <!-- Heart Pulse overlay -->
+                <path
+                  class="pulse-line"
+                  d="M15 25 L20 25 L23 15 L27 35 L30 25 L35 25"
+                  stroke="#4285f4"
+                  stroke-width="3"
+                  fill="none"
+                />
+                <!-- Rod of Asclepius -->
+                <path
+                  class="medical-rod"
+                  d="M24 15 Q25 25 24 35"
+                  stroke="#4285f4"
+                  stroke-width="2"
+                  fill="none"
+                />
+              </svg>
+            </div>
+            <h1 class="sitename mb-0">
+              <span class="volunteer" style="color: #4285f4">VolunteerEMS</span>
+            </h1>
+          </div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="/add-organization">Add Organization</a></li>
+            <li><a href="about-us.html">About</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <!-- Action Button -->
+
+        <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      </div>
+    </header>
+
+    <main class="main">
    <section id="about" class="about section">
     <div class="container" data-aos="fade-up" data-aos-delay="100">
       <div class="row gy-4 align-items-center justify-content-between">
@@ -1103,3 +1217,94 @@
     </div>
   </section>
   <!-- /Contact Section -->
+</main>
+
+<footer id="footer" class="footer">
+  <div class="container footer-top">
+    <div class="row gy-4">
+      <!-- About/Contact Section -->
+      <div class="col-lg-4 col-md-6 footer-about">
+        <a href="/" class="logo d-flex align-items-center">
+          <!-- Logo SVG -->
+          <div class="logo-icon me-2">
+            <svg viewBox="0 0 50 50" class="logo-svg" width="40" height="40">
+              <path class="star-base" d="M25 2 L29 20 L45 20 L32 32 L38 48 L25 38 L12 48 L18 32 L5 20 L21 20 Z" fill="#4285f4"/>
+              <path class="pulse-line" d="M15 25 L20 25 L23 15 L27 35 L30 25 L35 25" stroke="white" stroke-width="3" fill="none"/>
+              <path class="medical-rod" d="M24 15 Q25 25 24 35" stroke="white" stroke-width="2" fill="none"/>
+            </svg>
+          </div>
+          <span class="sitename">VolunteerEMS</span>
+        </a>
+        <div class="footer-contact pt-3">
+          <p>Find and join volunteer Emergency Medical Services organizations near you.</p>
+          <p class="mt-3">
+            <strong>Contact:</strong>
+            <span>info@volunteerems.org</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="col-lg-4 col-md-3 footer-links">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/add-organization">Add Organization</a></li>
+          <li><a href="/about">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Links -->
+      <div class="col-lg-4 col-md-3 footer-links">
+        <h4>Social Links</h4>
+        <ul class="social-links d-flex gap-3">
+          <li>
+            <a href="#" aria-label="Twitter" class="d-flex align-items-center justify-content-center">
+              <i class="bi bi-twitter-x"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="Facebook" class="d-flex align-items-center justify-content-center">
+              <i class="bi bi-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" aria-label="LinkedIn" class="d-flex align-items-center justify-content-center">
+              <i class="bi bi-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="container copyright text-center mt-4">
+    <p>
+      © <span>Copyright</span>
+      <strong class="px-1">VolunteerEMS</strong>
+      <span>All Rights Reserved</span>
+    </p>
+  </div>
+</footer>
+
+
+
+<!-- Scroll Top -->
+<a
+  href="#"
+  id="scroll-top"
+  class="scroll-top d-flex align-items-center justify-content-center"
+  ><i class="bi bi-arrow-up-short"></i
+></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="assets/vendor/php-email-form/validate.js"></script>
+<script src="assets/vendor/aos/aos.js"></script>
+<script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+<script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+<script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+<!-- Main JS File -->
+<script src="assets/js/main.js"></script>
+</body>
+</html>
