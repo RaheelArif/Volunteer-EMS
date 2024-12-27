@@ -42,31 +42,24 @@
       href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
       rel="stylesheet"
     />
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
 
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet" />
   </head>
 
   <body class="index-page">
-
-  
-    
     <header id="header" class="header d-flex align-items-center fixed-top">
       <div
         class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
       >
         <!-- Logo Section -->
-        <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
           <div class="logo-wrapper d-flex align-items-center">
             <div class="logo-icon me-2">
-                <i class="bi bi-star-fill logo-star"></i>
-
+              <i class="bi bi-star-fill logo-star"></i>
             </div>
             <h1 class="sitename mb-0">
               <span class="volunteer" style="color: #4285f4">VolunteerEMS</span>
@@ -77,9 +70,9 @@
         <!-- Navigation Menu -->
         <nav id="navmenu" class="navmenu">
           <ul>
-            <li><a href="index.html" >Home</a></li>
-            <li><a href="add-organization.html" >Add Organization</a></li>
-            <li><a href="about-us.html" class="active">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="add-organization.html">Add Organization</a></li>
+            <li><a href="about-us.html" >About</a></li>
           </ul>
           <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>
@@ -91,92 +84,216 @@
     </header>
 
     <main class="main">
-   
-      <section id="about" class="about section">
-        <div style="margin-top: 80px;" class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row gy-4 align-items-center justify-content-between">
-            <!-- Left Section with Content -->
-            <div class="col-xl-5" data-aos="fade-up" data-aos-delay="200">
-              <span class="about-meta">MORE ABOUT US</span>
-              <h2 class="about-title">Connecting Communities with Volunteer EMS Services</h2>
-              <p class="about-description">
-                VolunteerEMS.org was created to help people find local Emergency Medical Services (EMS)
-                agencies. Whether you are trained as a first responder or looking to join as a volunteer, we provide
-                a directory of EMS organizations across the country that rely on dedicated volunteers to answer
-                the call in emergencies.
-              </p>
-              <p class="about-description">
-                Our mission is to connect communities with the appropriate EMS agencies and support the
-                recruitment of new volunteers to ensure everyone can access emergency services when needed.
-              </p>
-      
-              <div class="row feature-list-wrapper">
-                <div class="col-md-6">
-                  <ul class="feature-list">
-                    <li><i class="bi bi-check-circle-fill"></i> Find EMS agencies near you</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Add your EMS organization</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Volunteer to make a difference</li>
-                  </ul>
-                </div>
-                <div class="col-md-6">
-                  <ul class="feature-list">
-                    <li><i class="bi bi-check-circle-fill"></i> Community-focused service</li>
-                    <li><i class="bi bi-check-circle-fill"></i> No cost to search agencies</li>
-                    <li><i class="bi bi-check-circle-fill"></i> Built to help communities thrive</li>
-                  </ul>
-                </div>
-              </div>
-      
-              <div class="info-wrapper">
-                <div class="row gy-4">
-                  <div class="col-lg-5">
-                    <div class="profile d-flex align-items-center gap-3">
-                     
-                      <div>
-                        <h4 class="profile-name">Apu (Founder)</h4>
-                        <p class="profile-position">Springfield First Aid Squad Member</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-7">
-                    <div class="contact-info d-flex align-items-center gap-2">
-                      <!-- Correct mail icon from Bootstrap Icons -->
-                      <div>
-                        <p class="contact-label"> <i class="bi bi-envelope-fill"></i>Email</p> <!-- Adjusted label -->
-                        <p class="contact-email">apu@volunteerems.org</p>
-                      </div>
-                    </div>
-                  </div>
-                  
+      <section
+        style="margin-top: 100px"
+        id="search-results"
+        class="search-results section"
+      >
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Volunteer EMS Agencies</h2>
+          <p>
+            The following Volunteer EMS agencies provide service in your area!
+          </p>
+        </div>
+        <!-- End Section Title -->
+
+        <div
+          id="single-match-view"
+          class="container"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="row gy-4">
+            <!-- Main Organization Details Column -->
+            <div class="col-lg-8">
+              <div class="organization-details">
+                <h3 class="organization-name">Exampleville First Aid Squad</h3>
+                <h6 class="organization-subtitle">
+                  Dedicated volunteers serving the community since 2005 in
+                  Exampleville, NJ
+                </h6>
+                <div class="organization-info">
+                  <p>
+                    <strong>Physical address:</strong> 123 Main Street,
+                    Exampleville, NJ 07001
+                  </p>
+                  <p>
+                    <strong>Mailing address:</strong> P.O. Box 456,
+                    Exampleville, NJ 07001
+                  </p>
+                  <p>
+                    <strong>Website:</strong>
+                    <a href="http://www.example.org/" target="_blank">
+                      http://www.example.org/</a
+                    >
+                  </p>
+                  <p>
+                    For operational issues, contact <br />
+                    <strong>Captain:</strong> at 111-111-111 or
+                    <a href="mailto:example@example.org">example@example.org</a>
+                  </p>
+                  <p>
+                    If you are interested in volunteering, contact <br />
+                    <strong>Volunteer Coordinator:</strong> at 111-111-111 or
+                    <a href="mailto:example@example.org">example@example.org</a>
+                  </p>
+                  <p>
+                    <small
+                      ><em
+                        >Is this your agency? Do you need to
+                        <a href="#">update</a> this info?</em
+                      ></small
+                    >
+                  </p>
                 </div>
               </div>
             </div>
-      
-            <!-- Right Section with Images -->
-            <div class="col-xl-6" data-aos="fade-up" data-aos-delay="300">
-              <div class="image-wrapper">
-                <div class="images position-relative" data-aos="zoom-out" data-aos-delay="400">
-                  <img
-                    src="assets/img/about-5.webp"
-                    alt="EMS Volunteer Work"
-                    class="img-fluid main-image rounded-4"
-                  />
-                  <img
-                    src="assets/img/about-2.webp"
-                    alt="EMS Team Collaboration"
-                    class="img-fluid small-image rounded-4"
-                  />
-                </div>
-                <div class="experience-badge floating">
-                
-                  <p>Connecting Communities to EMS Agencies</p>
-                </div>
+
+            <!-- State Organization Links Column -->
+            <div class="col-lg-4">
+              <div class="state-organizations">
+                <h5 class="state-organizations-title">State Organizations</h5>
+                <p>
+                  <a href="#">
+                    <strong>Example State First Aid Council</strong>
+                  </a>
+                  <br />
+                  Bringing together members of Example's volunteer first aid &
+                  rescue squads
+                  <br />
+                  <a href="http://www.example.org/" target="_blank"
+                    >www.example.org</a
+                  >
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
+        <div
+          id="no-matches-view"
+          class="container"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="no-matches-content text-center">
+            <div class=" section-title" data-aos="fade-up">
+              <h2>No matching agencies found.</h2>
+              <p class="no-matches-text">
+                We can search for
+                <a href="#" class="nearby-link">nearby agencies</a>
+                or perhaps you can
+                <a href="add-organization.html" class="add-link">add</a>
+                yours?
+              </p>
+              <button class="btn nearby-btn">Nearby Agencies</button>
+            </div>
+
+          </div>
+        </div>
+
+        <div
+        id="multiple-matches-view"
+        class="container"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      
+      >
+
+      <h3 style="color: red;" class="organization-name">this is for multiple found  , not much sure about this view</h3>
+        <div class="row gy-4">
+          <div class="col-lg-12">
+            <div class="organization-details">
+              <h3 class="organization-name">Union Emergency Medical Unit</h3>
+              <h6 class="organization-subtitle">
+                Established in 2003, Union EMU is a non-profit volunteer organization.
+              </h6>
+              <div class="organization-info">
+                <p>
+                  <strong>Physical address:</strong> 2493 Vauxhall Road, Union, NJ 07083
+                </p>
+                <p>
+                  <strong>Mailing address:</strong> 2493 Vauxhall Road, Union, NJ 07083
+                </p>
+                <p>
+                  <strong>Website:</strong>
+                  <a href="http://unionemu.org" target="_blank">http://unionemu.org</a>
+                </p>
+                <p>
+                  For operational issues, contact <br />
+                  <strong>Jay Levin:</strong> at 9086873373
+                </p>
+                <p>
+                  If you are interested in volunteering, contact <br />
+                  <strong>Tiffany Gaven:</strong> at 9086873373
+                </p>
+                <p>
+                  <small
+                    ><em
+                      >Is this your agency? Do you need to
+                      <a href="#">update</a> this info?</em
+                    ></small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="organization-details">
+              <h3 class="organization-name">Union Emergency Medical Unit</h3>
+              <h6 class="organization-subtitle">
+                Union Emergency Medical Unit (UEMU) provides emergency medical service
+                to the residents, visitors, employees and vendors within the Township of
+                Union.
+              </h6>
+              <div class="organization-info">
+                <p>
+                  <strong>Physical address:</strong> 2493 Vauxhall Rd., Union, NJ 07083
+                </p>
+                <p>
+                  <strong>Mailing address:</strong> 2493 Vauxhall Rd., Union, NJ 07083
+                </p>
+                <p>
+                  <strong>Website:</strong>
+                  <a href="http://unionemu.org" target="_blank">http://unionemu.org</a>
+                </p>
+                <p>
+                  For operational issues, contact <br />
+                  <strong>Matt Steitz:</strong> at 908-687-3373
+                </p>
+                <p>
+                  If you are interested in volunteering, contact <br />
+                  <strong>Judie Caron:</strong> at 908-687-3373
+                </p>
+                <p>
+                  <small
+                    ><em
+                      >Is this your agency? Do you need to
+                      <a href="#">update</a> this info?</em
+                    ></small
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="state-organizations">
+              <h5 class="state-organizations-title">State Organizations</h5>
+              <p>
+                <a href="#">
+                  <strong>NJ State First Aid Council</strong>
+                </a>
+                <br />
+                Bringing together members of NJ's volunteer first aid & rescue squads
+                <br />
+                <a href="http://www.NJSFAC.org" target="_blank">www.NJSFAC.org</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </section>
       <section id="call-to-action" class="call-to-action section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div
@@ -283,8 +400,6 @@
           </div>
         </div>
       </section>
-
-      
     </main>
 
     <footer id="footer" class="footer">
@@ -295,20 +410,22 @@
             <a href="/" class="logo d-flex align-items-center">
               <!-- Logo SVG -->
               <div class="logo-icon me-2">
-                <i style="color: black;" class="bi bi-star-fill logo-star"></i>
-
+                <i style="color: black" class="bi bi-star-fill logo-star"></i>
               </div>
-              <span style="color: black;" class="sitename">VolunteerEMS</span>
+              <span style="color: black" class="sitename">VolunteerEMS</span>
             </a>
             <div class="footer-contact pt-3">
-              <p>Find and join volunteer Emergency Medical Services organizations near you.</p>
+              <p>
+                Find and join volunteer Emergency Medical Services organizations
+                near you.
+              </p>
               <p class="mt-3">
                 <strong>Contact:</strong>
                 <span>info@volunteerems.org</span>
               </p>
             </div>
           </div>
-    
+
           <!-- Quick Links -->
           <div class="col-lg-4 col-md-3 footer-links">
             <h4>Navigation</h4>
@@ -318,23 +435,35 @@
               <li><a href="about-us.html">About</a></li>
             </ul>
           </div>
-    
+
           <!-- Social Links -->
           <div class="col-lg-4 col-md-3 footer-links">
             <h4>Social Links</h4>
             <ul class="social-links d-flex gap-3">
               <li>
-                <a href="#" aria-label="Twitter" class="d-flex align-items-center justify-content-center">
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  class="d-flex align-items-center justify-content-center"
+                >
                   <i class="bi bi-twitter-x"></i>
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="Facebook" class="d-flex align-items-center justify-content-center">
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="d-flex align-items-center justify-content-center"
+                >
                   <i class="bi bi-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="#" aria-label="LinkedIn" class="d-flex align-items-center justify-content-center">
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  class="d-flex align-items-center justify-content-center"
+                >
                   <i class="bi bi-linkedin"></i>
                 </a>
               </li>
@@ -351,28 +480,17 @@
       </div>
     </footer>
 
-  
-
     <!-- Scroll Top -->
-    <a
-      href="#"
-      id="scroll-top"
-      class="scroll-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>window.addEventListener('load', function () {
+    <script>
+      window.addEventListener("load", function () {
         window.scrollTo(0, 0);
-      });</script>
+      });
+    </script>
   </body>
 </html>

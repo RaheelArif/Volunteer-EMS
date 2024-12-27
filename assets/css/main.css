@@ -1175,11 +1175,19 @@ section,
   color: var(--accent-color);
   font-size: 1.5rem;
 }
-
+.logo-star {
+  color: #4285f4; /* Theme's primary color */
+  font-size: 1.5em; /* Adjust size if necessary */
+}
 .about .contact-info .contact-label {
   color: color-mix(in srgb, var(--default-color), transparent 30%);
   font-size: 0.875rem;
   margin: 0;
+  display: flex;
+  align-items: center;
+}
+.about .contact-info .contact-label .bi{
+  margin-right: 10px;
 }
 
 .about .contact-info .contact-number {
@@ -1288,6 +1296,9 @@ section,
 /*--------------------------------------------------------------
 # Features Section
 --------------------------------------------------------------*/
+.features{
+  margin-top: 30px;
+}
 .features .nav-tabs {
   border: 0;
   background-color: color-mix(in srgb, var(--default-color), transparent 96%);
@@ -2606,5 +2617,9 @@ section,
 .cta-search-wrapper .form-control::placeholder {
   color: #6c757d;
   opacity: 0.8;
+}
+
+#add-organization{
+  padding-top: 150px;
 }
 

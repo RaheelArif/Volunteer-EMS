@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VolunteerEMS - Emergency Medical Services Volunteer Directory</title>
+    <meta
+      name="description"
+      content="Find and join volunteer Emergency Medical Services organizations near you. Connect with local EMS agencies and make a difference in your community."
+    />
+    <meta
+      name="keywords"
+      content="volunteer EMS, emergency medical services, EMS volunteer, medical volunteer, first responder volunteer, ambulance volunteer, emergency services"
+    />
+
+    <!-- Favicons -->
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9InN0YXItYmFzZSIgZD0iTTI1IDIgTDI5IDIwIEw0NSAyMCBMMzIgMzIgTDM4IDQ4IEwyNSAzOCBMMTIgNDggTDE4IDMyIEw1IDIwIEwyMSAyMCBaIiBmaWxsPSIjNDI4NWY0Ii8+PHBhdGggY2xhc3M9InB1bHNlLWxpbmUiIGQ9Ik0xNSAyNSBMMjAgMjUgTDIzIDE1IEwyNyAzNSBMMzAgMjUgTDM1IDI1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48cGF0aCBjbGFzcz0ibWVkaWNhbC1yb2QiIGQ9Ik0yNCAxNSBRMjUgMjUgMjQgMzUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg=="
+    />
+    <link
+      rel="apple-touch-icon"
+      type="image/svg+xml"
+      href="data:image/svg+xml;base64,PHN2ZyB2aWV3Qm94PSIwIDAgNTAgNTAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggY2xhc3M9InN0YXItYmFzZSIgZD0iTTI1IDIgTDI5IDIwIEw0NSAyMCBMMzIgMzIgTDM4IDQ4IEwyNSAzOCBMMTIgNDggTDE4IDMyIEw1IDIwIEwyMSAyMCBaIiBmaWxsPSIjNDI4NWY0Ii8+PHBhdGggY2xhc3M9InB1bHNlLWxpbmUiIGQ9Ik0xNSAyNSBMMjAgMjUgTDIzIDE1IEwyNyAzNSBMMzAgMjUgTDM1IDI1IiBzdHJva2U9IndoaXRlIiBzdHJva2Utd2lkdGg9IjMiIGZpbGw9Im5vbmUiLz48cGF0aCBjbGFzcz0ibWVkaWNhbC1yb2QiIGQ9Ik0yNCAxNSBRMjUgMjUgMjQgMzUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjwvc3ZnPg=="
+    />
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Main CSS File -->
+    <link href="assets/css/main.css" rel="stylesheet" />
+  </head>
+
+  <body class="index-page">
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="header-container container-fluid container-xl position-relative d-flex align-items-center justify-content-between"
+      >
+        <!-- Logo Section -->
+        <a
+          href="index.html"
+          class="logo d-flex align-items-center me-auto me-xl-0"
+        >
+          <div class="logo-wrapper d-flex align-items-center">
+            <div class="logo-icon me-2">
+                <i class="bi bi-star-fill logo-star"></i>
+
+            </div>
+            <h1 class="sitename mb-0">
+              <span class="volunteer" style="color: #4285f4">VolunteerEMS</span>
+            </h1>
+          </div>
+        </a>
+
+        <!-- Navigation Menu -->
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="index.html" >Home</a></li>
+            <li><a href="add-organization.html" class="active">Add Organization</a></li>
+            <li><a href="about-us.html">About</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <!-- Action Button -->
+
+        <a class="btn-getstarted" href="index.html#about">Get Started</a>
+      </div>
+    </header>
+
+    <main class="main">
+      <section id="add-organization" class="contact section light-background">
+        <!-- Section Title -->
+        <div class="container section-title" data-aos="fade-up">
+          <h2>Add Your Organization</h2>
+
+          <div class="features">
+            <div class="d-flex justify-content-center">
+              <ul class="nav nav-tabs" data-aos="fade-up" data-aos-delay="100">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active show"
+                    data-bs-toggle="tab"
+                    data-bs-target="#features-tab-1"
+                  >
+                    <h4>Statewide Organization</h4>
+                  </a>
+                  <!-- End tab nav item -->
+                </li>
+                <li class="nav-item">
+                  <a
+                    class="nav-link"
+                    data-bs-toggle="tab"
+                    data-bs-target="#features-tab-2"
+                  >
+                    <h4>Local Organization</h4>
+                  </a>
+                </li>
+                <!-- End tab nav item -->
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End Section Title -->
+
+        <div
+          class="tab-content container"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="tab-pane fade active show" id="features-tab-1">
+            <div class="row g-4 g-lg-5">
+              <div class="col-lg-12">
+                <div
+                  class="contact-form"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <h3>Organization Information</h3>
+
+                  <p>
+                    Please add information about your emergency medical services
+                    agency. All entries are reviewed manually so it may take a
+                    day or two for your entry to appear in the directory.
+                  </p>
+
+                  <form
+                    action="forms/contact.php"
+                    method="post"
+                    class="php-email-form"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <div class="row gy-4">
+                      <div class="col-12">
+                        <label for="organization_name" class="form-label"
+                          >Organization's name:
+                          <span style="color: red">*</span></label
+                        >
+                        <input
+                          type="text"
+                          name="organization_name"
+                          class="form-control"
+                          placeholder="Organization Name"
+                          required=""
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="website" class="form-label"
+                          >Website: <span style="color: red">*</span></label
+                        >
+                        <input
+                          type="url"
+                          class="form-control"
+                          name="website"
+                          placeholder="http://"
+                          required=""
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="description" class="form-label"
+                          >Description: <span style="color: red">*</span></label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="description"
+                          placeholder="(80 characters max.)"
+                          rows="3"
+                          maxlength="80"
+                          required=""
+                        ></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="state_served" class="form-label"
+                          >State served:
+                          <span style="color: red">*</span></label
+                        >
+
+                        <select
+                          class="form-control"
+                          name="state_served"
+                          required=""
+                        >
+                          <option value="" disabled selected>
+                            Select State
+                          </option>
+                          <option value="AL">Alabama</option>
+                          <option value="AK">Alaska</option>
+                          <option value="AZ">Arizona</option>
+                          <option value="AR">Arkansas</option>
+                          <option value="CA">California</option>
+                          <option value="CO">Colorado</option>
+                          <option value="CT">Connecticut</option>
+                          <option value="DE">Delaware</option>
+                          <option value="DC">District Of Columbia</option>
+                          <option value="FL">Florida</option>
+                          <option value="GA">Georgia</option>
+                          <option value="HI">Hawaii</option>
+                          <option value="ID">Idaho</option>
+                          <option value="IL">Illinois</option>
+                          <option value="IN">Indiana</option>
+                          <option value="IA">Iowa</option>
+                          <option value="KS">Kansas</option>
+                          <option value="KY">Kentucky</option>
+                          <option value="LA">Louisiana</option>
+                          <option value="ME">Maine</option>
+                          <option value="MD">Maryland</option>
+                          <option value="MA">Massachusetts</option>
+                          <option value="MI">Michigan</option>
+                          <option value="MN">Minnesota</option>
+                          <option value="MS">Mississippi</option>
+                          <option value="MO">Missouri</option>
+                          <option value="MT">Montana</option>
+                          <option value="NE">Nebraska</option>
+                          <option value="NV">Nevada</option>
+                          <option value="NH">New Hampshire</option>
+                          <option value="NJ">New Jersey</option>
+                          <option value="NM">New Mexico</option>
+                          <option value="NY">New York</option>
+                          <option value="NC">North Carolina</option>
+                          <option value="ND">North Dakota</option>
+                          <option value="OH">Ohio</option>
+                          <option value="OK">Oklahoma</option>
+                          <option value="OR">Oregon</option>
+                          <option value="PA">Pennsylvania</option>
+                          <option value="RI">Rhode Island</option>
+                          <option value="SC">South Carolina</option>
+                          <option value="SD">South Dakota</option>
+                          <option value="TN">Tennessee</option>
+                          <option value="TX">Texas</option>
+                          <option value="UT">Utah</option>
+                          <option value="VT">Vermont</option>
+                          <option value="VA">Virginia</option>
+                          <option value="WA">Washington</option>
+                          <option value="WV">West Virginia</option>
+                          <option value="WI">Wisconsin</option>
+                          <option value="WY">Wyoming</option>
+                        </select>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="private_notes" class="form-label"
+                          >Private notes:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ></label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="private_notes"
+                          placeholder="Private notes"
+                          rows="3"
+                        ></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="email_address" class="form-label"
+                          >E-mail address of person providing this information:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ><span style="color: red">*</span></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email_address"
+                          placeholder="Your Email"
+                          required=""
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="how_hear" class="form-label"
+                          >How did you hear about VolunteerEMS.org:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="how_hear"
+                          placeholder="How did you hear about us?"
+                        />
+                      </div>
+
+                      <div class="col-12 text-center">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">
+                          Your message has been sent. Thank you!
+                        </div>
+
+                        <button type="submit" class="btn">Add</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-pane fade" id="features-tab-2">
+            <div class="row g-4 g-lg-5">
+              <div class="col-lg-12">
+                <div
+                  class="contact-form"
+                  data-aos="fade-up"
+                  data-aos-delay="300"
+                >
+                  <h3>Organization Information</h3>
+
+                  <p>
+                    Please add information about your emergency medical services
+                    agency. All entries are reviewed manually so it may take a
+                    day or two for your entry to appear in the directory.
+                  </p>
+
+                  <form
+                    action="forms/contact.php"
+                    method="post"
+                    class="php-email-form"
+                    data-aos="fade-up"
+                    data-aos-delay="200"
+                  >
+                    <div class="row gy-4">
+                      <div class="col-12">
+                        <label for="organization_name" class="form-label"
+                          >Organization:
+                          <span style="color: red">*</span></label
+                        >
+                        <input
+                          type="text"
+                          name="organization_name"
+                          class="form-control"
+                          placeholder="Organization Name"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label for="physical_address" class="form-label"
+                          >Physical address:
+                        </label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="physical_address"
+                          placeholder="Physical Address"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="mailing_address" class="form-label"
+                          >Mailing address:
+                        </label>
+                        <div class="form-check">
+                          <input
+                            class="form-check-input"
+                            type="checkbox"
+                            value="same"
+                            id="same_as_above"
+                            name="same_as_above"
+                          />
+                          <label class="form-check-label" for="same_as_above">
+                            Same as above
+                          </label>
+                        </div>
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="mailing_address"
+                          placeholder="Mailing Address"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="website" class="form-label"
+                          >Website:
+                        </label>
+                        <input
+                          type="url"
+                          class="form-control"
+                          name="website"
+                          placeholder="http://"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="operations_phone" class="form-label"
+                          >Operations contact: Phone number:
+                        </label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          name="operations_phone"
+                          placeholder="Phone number"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="operations_email" class="form-label"
+                          >Operations contact: E-mail address:
+                        </label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="operations_email"
+                          placeholder="Email Address"
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label for="volunteering_phone" class="form-label"
+                          >Volunteering contact: Phone number:
+                        </label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          name="volunteering_phone"
+                          placeholder="Phone number"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="volunteering_email" class="form-label"
+                          >Volunteering contact: E-mail address:
+                        </label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="volunteering_email"
+                          placeholder="Email Address"
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="zip_codes" class="form-label"
+                          >ZIP Codes served:
+                          <span style="font-size: 0.8em"
+                            >(Primary response area only, separate with spaces
+                            or commas)</span
+                          ><span style="color: red">*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="zip_codes"
+                          placeholder="ZIP Codes"
+                          required=""
+                        />
+                      </div>
+
+                      <div class="col-12">
+                        <label for="public_notes" class="form-label"
+                          >Public notes:
+                          <span style="font-size: 0.8em"
+                            >(Viewable to the public)</span
+                          ></label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="public_notes"
+                          placeholder="Public Notes"
+                          rows="3"
+                        ></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="private_notes" class="form-label"
+                          >Private notes:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ></label
+                        >
+                        <textarea
+                          class="form-control"
+                          name="private_notes"
+                          placeholder="Private Notes"
+                          rows="3"
+                        ></textarea>
+                      </div>
+
+                      <div class="col-12">
+                        <label for="email_address" class="form-label"
+                          >E-mail address of person providing this information:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ><span style="color: red">*</span></label
+                        >
+                        <input
+                          type="email"
+                          class="form-control"
+                          name="email_address"
+                          placeholder="Your Email"
+                          required=""
+                        />
+                      </div>
+                      <div class="col-12">
+                        <label for="how_hear" class="form-label"
+                          >How did you hear about VolunteerEMS.org:
+                          <span style="font-size: 0.8em"
+                            >(Viewable only by VolunteerEMS.org)</span
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          name="how_hear"
+                          placeholder="How did you hear about us?"
+                        />
+                      </div>
+
+                      <div class="col-12 text-center">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">
+                          Your message has been sent. Thank you!
+                        </div>
+
+                        <button type="submit" class="btn">Add</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="container footer-top">
+        <div class="row gy-4">
+          <!-- About/Contact Section -->
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="/" class="logo d-flex align-items-center">
+              <!-- Logo SVG -->
+              <div class="logo-icon me-2">
+                <i style="color: black;" class="bi bi-star-fill logo-star"></i>
+
+              </div>
+              <span style="color: black;" class="sitename">VolunteerEMS</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>
+                Find and join volunteer Emergency Medical Services organizations
+                near you.
+              </p>
+              <p class="mt-3">
+                <strong>Contact:</strong>
+                <span>info@volunteerems.org</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-4 col-md-3 footer-links">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="add-organization.html">Add Organization</a></li>
+              <li><a href="about-us.html">About</a></li>
+            </ul>
+          </div>
+
+          <!-- Social Links -->
+          <div class="col-lg-4 col-md-3 footer-links">
+            <h4>Social Links</h4>
+            <ul class="social-links d-flex gap-3">
+              <li>
+                <a
+                  href="#"
+                  aria-label="Twitter"
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <i class="bi bi-twitter-x"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="Facebook"
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <i class="bi bi-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  aria-label="LinkedIn"
+                  class="d-flex align-items-center justify-content-center"
+                >
+                  <i class="bi bi-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="container copyright text-center mt-4">
+        <p>
+          © <span>Copyright</span>
+          <strong class="px-1">VolunteerEMS</strong>
+          <span>All Rights Reserved</span>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Scroll Top -->
+    <a
+      href="#"
+      id="scroll-top"
+      class="scroll-top d-flex align-items-center justify-content-center"
+      ><i class="bi bi-arrow-up-short"></i
+    ></a>
+
+    <!-- Vendor JS Files -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+    <!-- Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      window.addEventListener("load", function () {
+        window.scrollTo(0, 0);
+      });
+    </script>
+  </body>
+</html>
